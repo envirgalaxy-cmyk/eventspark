@@ -1,0 +1,24 @@
+{
+  "overview": "A modern, full-featured Event Booking Platform where users can browse concerts, workshops, and conferences, view detailed event pages with countdown timers, select ticket tiers, and complete a demo checkout with a QR code ticket confirmation.",
+  "features": [
+    "Browse events by category, date, location, and price with on-submit search",
+    "Event detail pages with countdown timer, image gallery, reviews/ratings, and social sharing",
+    "Ticket tiers (Early Bird, Standard, VIP) with seat availability and pricing breakdown",
+    "Demo checkout flow with attendee form validation and QR code booking confirmation",
+    "Favorites (heart toggle) stored in session state",
+    "Pre-seeded sample events across concerts, workshops, and conferences",
+    "Fully responsive design with vibrant OKLCH color palette"
+  ],
+  "category": "entertainment",
+  "tags": [
+    "events",
+    "booking",
+    "tickets",
+    "concerts",
+    "workshops",
+    "conferences",
+    "tailwind",
+    "react"
+  ],
+  "last_updated": "2026-04-24T05:22:23.839Z"
+}

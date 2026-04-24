@@ -1,0 +1,65 @@
+type TicketTierPublic = 
+ record {
+   available: nat;
+   benefits: vec text;
+   eventId: nat;
+   id: nat;
+   name: text;
+   price: float64;
+   total: nat;
+ };
+type Review = 
+ record {
+   authorName: text;
+   comment: text;
+   date: int;
+   eventId: nat;
+   id: nat;
+   rating: nat;
+ };
+type Result = 
+ variant {
+   err: text;
+   ok: Booking;
+ };
+type EventPublic = 
+ record {
+   availableSeats: nat;
+   capacity: nat;
+   category: text;
+   city: text;
+   date: int;
+   description: text;
+   id: nat;
+   imageUrl: text;
+   location: text;
+   price: float64;
+   rating: float64;
+   reviewCount: nat;
+   title: text;
+   venue: text;
+ };
+type Booking = 
+ record {
+   attendeeEmail: text;
+   attendeeName: text;
+   attendeePhone: text;
+   confirmationCode: text;
+   createdAt: int;
+   eventId: nat;
+   id: text;
+   quantity: nat;
+   tierId: nat;
+   totalPrice: float64;
+ };
+service : {
+  addReview: (eventId: nat, authorName: text, rating: nat, comment: text) ->
+   (Review);
+  createBooking: (eventId: nat, tierId: nat, quantity: nat, attendeeName:
+   text, attendeeEmail: text, attendeePhone: text) -> (Result);
+  getEvent: (id: nat) -> (opt EventPublic) query;
+  getEvents: () -> (vec EventPublic) query;
+  getEventsByCategory: (category: text) -> (vec EventPublic) query;
+  getReviews: (eventId: nat) -> (vec Review) query;
+  getTicketTiers: (eventId: nat) -> (vec TicketTierPublic) query;
+}

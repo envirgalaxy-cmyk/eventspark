@@ -1,0 +1,371 @@
+import { j as jsxRuntimeExports, ah as Slot, b as cn, ai as cva } from "./index-BV_UP3b9.js";
+const badgeVariants = cva(
+  "inline-flex items-center justify-center rounded-md border px-2 py-0.5 text-xs font-medium w-fit whitespace-nowrap shrink-0 [&>svg]:size-3 gap-1 [&>svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden",
+  {
+    variants: {
+      variant: {
+        default: "border-transparent bg-primary text-primary-foreground [a&]:hover:bg-primary/90",
+        secondary: "border-transparent bg-secondary text-secondary-foreground [a&]:hover:bg-secondary/90",
+        destructive: "border-transparent bg-destructive text-destructive-foreground [a&]:hover:bg-destructive/90 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40 dark:bg-destructive/60",
+        outline: "text-foreground [a&]:hover:bg-accent [a&]:hover:text-accent-foreground"
+      }
+    },
+    defaultVariants: {
+      variant: "default"
+    }
+  }
+);
+function Badge({
+  className,
+  variant,
+  asChild = false,
+  ...props
+}) {
+  const Comp = asChild ? Slot : "span";
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(
+    Comp,
+    {
+      "data-slot": "badge",
+      className: cn(badgeVariants({ variant }), className),
+      ...props
+    }
+  );
+}
+const now = BigInt(Date.now()) * BigInt(1e6);
+const day = BigInt(864e11);
+const sampleEvents = [
+  {
+    id: BigInt(1),
+    title: "Neon Nights Music Festival",
+    description: "Three stages, 30 artists, one unforgettable weekend. Lose yourself in electronic beats, indie anthems, and pop superstars under the stars of downtown LA.",
+    category: "Music",
+    date: now + day * BigInt(14),
+    location: "Griffith Park Amphitheatre",
+    city: "Los Angeles, CA",
+    venue: "Griffith Park Amphitheatre",
+    price: 89,
+    imageUrl: "/assets/generated/event-music-festival.dim_800x450.jpg",
+    capacity: BigInt(5e3),
+    availableSeats: BigInt(342),
+    rating: 4.8,
+    reviewCount: BigInt(214)
+  },
+  {
+    id: BigInt(2),
+    title: "Full-Stack Dev Summit 2026",
+    description: "Two days of deep-dive workshops with world-class engineers from Google, Meta, and top startups. Build faster, ship smarter.",
+    category: "Conference",
+    date: now + day * BigInt(21),
+    location: "Moscone Center West",
+    city: "San Francisco, CA",
+    venue: "Moscone Center West",
+    price: 349,
+    imageUrl: "/assets/generated/event-tech-conference.dim_800x450.jpg",
+    capacity: BigInt(1200),
+    availableSeats: BigInt(87),
+    rating: 4.9,
+    reviewCount: BigInt(376)
+  },
+  {
+    id: BigInt(3),
+    title: "Modern Watercolour Masterclass",
+    description: "Learn botanical illustration techniques from award-winning artist Lena Graves. All materials included. Limited to 20 seats.",
+    category: "Workshop",
+    date: now + day * BigInt(7),
+    location: "The Brush Studio",
+    city: "Brooklyn, NY",
+    venue: "The Brush Studio",
+    price: 129,
+    imageUrl: "/assets/generated/event-art-workshop.dim_800x450.jpg",
+    capacity: BigInt(20),
+    availableSeats: BigInt(6),
+    rating: 4.7,
+    reviewCount: BigInt(53)
+  },
+  {
+    id: BigInt(4),
+    title: "NBA All-Stars Charity Classic",
+    description: "Watch legends of the game square off in an exhibition match benefiting youth sports programs. Special celebrity appearances guaranteed.",
+    category: "Sports",
+    date: now + day * BigInt(10),
+    location: "Chase Center",
+    city: "San Francisco, CA",
+    venue: "Chase Center",
+    price: 75,
+    imageUrl: "/assets/generated/event-sports-basketball.dim_800x450.jpg",
+    capacity: BigInt(18e3),
+    availableSeats: BigInt(1240),
+    rating: 4.6,
+    reviewCount: BigInt(129)
+  },
+  {
+    id: BigInt(5),
+    title: "Shakespeare Under the Stars",
+    description: "A Midsummer Night's Dream performed by the acclaimed Pacific Theatre Company on an open-air stage with a live orchestra.",
+    category: "Arts",
+    date: now + day * BigInt(30),
+    location: "Delacorte Theater",
+    city: "New York, NY",
+    venue: "Delacorte Theater",
+    price: 55,
+    imageUrl: "/assets/generated/event-theatre.dim_800x450.jpg",
+    capacity: BigInt(1800),
+    availableSeats: BigInt(560),
+    rating: 4.9,
+    reviewCount: BigInt(98)
+  },
+  {
+    id: BigInt(6),
+    title: "Startup Pitch Night: Seed Edition",
+    description: "Ten hand-picked early-stage startups present to a panel of top VCs. Mingle with founders, investors, and fellow builders after the show.",
+    category: "Business",
+    date: now + day * BigInt(5),
+    location: "WeWork SoMa",
+    city: "San Francisco, CA",
+    venue: "WeWork SoMa",
+    price: 25,
+    imageUrl: "/assets/generated/event-startup-pitch.dim_800x450.jpg",
+    capacity: BigInt(250),
+    availableSeats: BigInt(40),
+    rating: 4.5,
+    reviewCount: BigInt(72)
+  },
+  {
+    id: BigInt(7),
+    title: "Mediterranean Cooking Bootcamp",
+    description: "Chef Marco Russo leads an immersive 3-hour hands-on cooking session. Master harissa lamb, shakshuka, and baklava from scratch.",
+    category: "Workshop",
+    date: now + day * BigInt(9),
+    location: "Culinary Institute LA",
+    city: "Los Angeles, CA",
+    venue: "Culinary Institute LA",
+    price: 95,
+    imageUrl: "/assets/generated/event-cooking-class.dim_800x450.jpg",
+    capacity: BigInt(24),
+    availableSeats: BigInt(12),
+    rating: 4.8,
+    reviewCount: BigInt(41)
+  },
+  {
+    id: BigInt(8),
+    title: "Jazz & Blues Evening",
+    description: "An intimate evening of live jazz featuring quartet sets from Chicago's most acclaimed musicians. Cocktails and tapas served throughout.",
+    category: "Music",
+    date: now + day * BigInt(3),
+    location: "Green Mill Jazz Club",
+    city: "Chicago, IL",
+    venue: "Green Mill Jazz Club",
+    price: 45,
+    imageUrl: "/assets/generated/event-jazz-blues.dim_800x450.jpg",
+    capacity: BigInt(150),
+    availableSeats: BigInt(28),
+    rating: 4.7,
+    reviewCount: BigInt(186)
+  },
+  {
+    id: BigInt(9),
+    title: "AI & Machine Learning Expo",
+    description: "Explore the cutting edge of AI with hands-on demos, keynotes from OpenAI and DeepMind researchers, and a live hackathon track.",
+    category: "Conference",
+    date: now + day * BigInt(45),
+    location: "Austin Convention Center",
+    city: "Austin, TX",
+    venue: "Austin Convention Center",
+    price: 199,
+    imageUrl: "/assets/generated/event-ai-expo.dim_800x450.jpg",
+    capacity: BigInt(3e3),
+    availableSeats: BigInt(850),
+    rating: 4.6,
+    reviewCount: BigInt(244)
+  },
+  {
+    id: BigInt(10),
+    title: "Ultra Marathon Pacific Trail",
+    description: "50-mile trail run through stunning Pacific coastline scenery. All fitness levels welcome with 25K and 10K distances also available.",
+    category: "Sports",
+    date: now + day * BigInt(60),
+    location: "Marin Headlands",
+    city: "San Francisco, CA",
+    venue: "Marin Headlands",
+    price: 110,
+    imageUrl: "/assets/generated/event-marathon.dim_800x450.jpg",
+    capacity: BigInt(500),
+    availableSeats: BigInt(193),
+    rating: 4.5,
+    reviewCount: BigInt(87)
+  },
+  {
+    id: BigInt(11),
+    title: "Broadway Touring: Hamilton",
+    description: "The smash-hit musical is back on tour. Lin-Manuel Miranda's iconic story of America's founding father reimagined as a hip-hop theatre masterpiece.",
+    category: "Arts",
+    date: now + day * BigInt(18),
+    location: "Paramount Theatre",
+    city: "Seattle, WA",
+    venue: "Paramount Theatre",
+    price: 135,
+    imageUrl: "/assets/generated/event-broadway.dim_800x450.jpg",
+    capacity: BigInt(2800),
+    availableSeats: BigInt(120),
+    rating: 4.9,
+    reviewCount: BigInt(512)
+  },
+  {
+    id: BigInt(12),
+    title: "Product Design Intensive",
+    description: "A two-day hands-on workshop covering user research, Figma prototyping, and design systems. Walk away with a portfolio-ready case study.",
+    category: "Workshop",
+    date: now + day * BigInt(25),
+    location: "IDEO Chicago Studio",
+    city: "Chicago, IL",
+    venue: "IDEO Chicago Studio",
+    price: 275,
+    imageUrl: "/assets/generated/event-design-workshop.dim_800x450.jpg",
+    capacity: BigInt(30),
+    availableSeats: BigInt(8),
+    rating: 4.8,
+    reviewCount: BigInt(64)
+  }
+];
+const sampleTicketTiers = {
+  "1": [
+    {
+      id: BigInt(1),
+      eventId: BigInt(1),
+      name: "General Admission",
+      price: 89,
+      benefits: ["Access to all 3 stages", "Festival wristband", "Event app"],
+      available: BigInt(200),
+      total: BigInt(3e3)
+    },
+    {
+      id: BigInt(2),
+      eventId: BigInt(1),
+      name: "VIP",
+      price: 189,
+      benefits: [
+        "Priority entry",
+        "Exclusive VIP lounge",
+        "Meet & greet access",
+        "Free drinks voucher"
+      ],
+      available: BigInt(50),
+      total: BigInt(500)
+    },
+    {
+      id: BigInt(3),
+      eventId: BigInt(1),
+      name: "Weekend Pass",
+      price: 299,
+      benefits: [
+        "Both days access",
+        "All VIP perks",
+        "Backstage tour",
+        "Merchandise bundle"
+      ],
+      available: BigInt(15),
+      total: BigInt(200)
+    }
+  ],
+  "2": [
+    {
+      id: BigInt(4),
+      eventId: BigInt(2),
+      name: "Conference Pass",
+      price: 349,
+      benefits: [
+        "All keynotes",
+        "Workshop access",
+        "Lunch included",
+        "Digital recordings"
+      ],
+      available: BigInt(60),
+      total: BigInt(800)
+    },
+    {
+      id: BigInt(5),
+      eventId: BigInt(2),
+      name: "Workshop Only",
+      price: 149,
+      benefits: ["3 workshops of choice", "Hands-on materials", "Certificate"],
+      available: BigInt(27),
+      total: BigInt(200)
+    },
+    {
+      id: BigInt(6),
+      eventId: BigInt(2),
+      name: "Team Bundle (5 seats)",
+      price: 1299,
+      benefits: [
+        "5 full passes",
+        "Reserved seating",
+        "Company logo on board",
+        "Networking dinner"
+      ],
+      available: BigInt(10),
+      total: BigInt(50)
+    }
+  ]
+};
+const sampleReviews = {
+  "1": [
+    {
+      id: BigInt(1),
+      eventId: BigInt(1),
+      authorName: "Marcus T.",
+      rating: BigInt(5),
+      comment: "Absolutely incredible festival! The lineup was diverse and the production quality was top-notch.",
+      date: BigInt(Date.now() - 864e5) * BigInt(1e6)
+    },
+    {
+      id: BigInt(2),
+      eventId: BigInt(1),
+      authorName: "Sarah K.",
+      rating: BigInt(5),
+      comment: "Best music festival I've attended in years. The venue was perfect and the crowd energy was electric.",
+      date: BigInt(Date.now() - 1728e5) * BigInt(1e6)
+    },
+    {
+      id: BigInt(3),
+      eventId: BigInt(1),
+      authorName: "James L.",
+      rating: BigInt(4),
+      comment: "Great event overall. Food vendors could have more variety but the music was phenomenal.",
+      date: BigInt(Date.now() - 2592e5) * BigInt(1e6)
+    }
+  ],
+  "2": [
+    {
+      id: BigInt(4),
+      eventId: BigInt(2),
+      authorName: "Priya M.",
+      rating: BigInt(5),
+      comment: "World-class speakers and incredibly well-organized. The workshops were worth every penny.",
+      date: BigInt(Date.now() - 864e5) * BigInt(1e6)
+    },
+    {
+      id: BigInt(5),
+      eventId: BigInt(2),
+      authorName: "Dev R.",
+      rating: BigInt(5),
+      comment: "Met some of the best engineers in the industry here. The networking opportunities are unreal.",
+      date: BigInt(Date.now() - 1728e5) * BigInt(1e6)
+    }
+  ]
+};
+const CATEGORIES = [
+  "All",
+  "Music",
+  "Conference",
+  "Workshop",
+  "Sports",
+  "Arts",
+  "Business"
+];
+export {
+  Badge as B,
+  CATEGORIES as C,
+  sampleTicketTiers as a,
+  sampleReviews as b,
+  sampleEvents as s
+};

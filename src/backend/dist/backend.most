@@ -1,0 +1,80 @@
+// Version: 1.0.0
+type Booking__91988831 =
+  {
+    attendeeEmail : Text;
+    attendeeName : Text;
+    attendeePhone : Text;
+    confirmationCode : Text;
+    createdAt : Int;
+    eventId : Nat;
+    id : Text;
+    quantity : Nat;
+    tierId : Nat;
+    totalPrice : Float
+  };
+type Event__543096582 =
+  {
+    var availableSeats : Nat;
+    capacity : Nat;
+    category : Text;
+    city : Text;
+    date : Int;
+    description : Text;
+    id : Nat;
+    imageUrl : Text;
+    location : Text;
+    price : Float;
+    var rating : Float;
+    var reviewCount : Nat;
+    title : Text;
+    venue : Text
+  };
+type Nat__490723111 = Nat__920180692;
+type Nat__920180692 = Nat;
+type Review__213122060 =
+  {
+    authorName : Text;
+    comment : Text;
+    date : Int;
+    eventId : Nat;
+    id : Nat;
+    rating : Nat
+  };
+type TicketTier__679461241 =
+  {
+    var available : Nat;
+    benefits : [Text];
+    eventId : Nat;
+    id : Nat;
+    name : Text;
+    price : Float;
+    total : Nat
+  };
+actor {
+  stable bookings :
+    {
+      var blockIndex : Nat__490723111;
+      var blocks : [var [var ?Booking__91988831]];
+      var elementIndex : Nat__490723111
+    };
+  stable events :
+    {
+      var blockIndex : Nat__490723111;
+      var blocks : [var [var ?Event__543096582]];
+      var elementIndex : Nat__490723111
+    };
+  stable var nextBookingId : Nat;
+  stable var nextReviewId : Nat;
+  stable reviews :
+    {
+      var blockIndex : Nat__490723111;
+      var blocks : [var [var ?Review__213122060]];
+      var elementIndex : Nat__490723111
+    };
+  stable tiers :
+    {
+      var blockIndex : Nat__490723111;
+      var blocks : [var [var ?TicketTier__679461241]];
+      var elementIndex : Nat__490723111
+    }
+};
